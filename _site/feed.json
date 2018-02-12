@@ -1,0 +1,58 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Blog Title",
+    "home_page_url": "http://localhost:4000/",
+    "feed_url": "http://localhost:4000/feed.json",
+    "description": "A short description.",
+    "icon": "http://localhost:4000/apple-touch-icon.png",
+    "favicon": "http://localhost:4000/assets/images/fav32.png",
+    "expired": false,
+    
+    "author": "Your Name",
+    
+"items": [
+    
+        {
+            "id": "http://localhost:4000/2018/02/11/status.html",
+            "title": "",
+            "summary": null,
+            "content_text": "Here’s a micro post example.",
+            "content_html": "<p>Here’s a micro post example.</p>",
+            "url": "http://localhost:4000/2018/02/11/status.html",
+            
+            
+            
+            
+            
+            "date_published": "2018-02-11T20:25:11-05:00",
+            "date_modified": "2018-02-11T20:25:11-05:00",
+            
+                "author": 
+                "Your Name"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/2018/02/11/welcome-to-jekyll.html",
+            "title": "Welcome to Jekyll!",
+            "summary": null,
+            "content_text": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post.ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.Jekyll also offers powerful support for code snippets:def print_hi(name)  puts \"Hi, #{name}\"endprint_hi('Tom')#=&gt; prints 'Hi, Tom' to STDOUT.Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk.",
+            "content_html": "<p>You’ll find this post in your <code class=\"highlighter-rouge\">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class=\"highlighter-rouge\">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p><p>To add new posts, simply add a file in the <code class=\"highlighter-rouge\">_posts</code> directory that follows the convention <code class=\"highlighter-rouge\">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p><p>Jekyll also offers powerful support for code snippets:</p><figure class=\"highlight\"><pre><code class=\"language-ruby\" data-lang=\"ruby\"><span class=\"k\">def</span> <span class=\"nf\">print_hi</span><span class=\"p\">(</span><span class=\"nb\">name</span><span class=\"p\">)</span><br data-jekyll-commonmark-ghpages=\"\" />  <span class=\"nb\">puts</span> <span class=\"s2\">\"Hi, </span><span class=\"si\">#{</span><span class=\"nb\">name</span><span class=\"si\">}</span><span class=\"s2\">\"</span><br data-jekyll-commonmark-ghpages=\"\" /><span class=\"k\">end</span><br data-jekyll-commonmark-ghpages=\"\" /><span class=\"n\">print_hi</span><span class=\"p\">(</span><span class=\"s1\">'Tom'</span><span class=\"p\">)</span><br data-jekyll-commonmark-ghpages=\"\" /><span class=\"c1\">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure><p>Check out the <a href=\"https://jekyllrb.com/docs/home\">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href=\"https://github.com/jekyll/jekyll\">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href=\"https://talk.jekyllrb.com/\">Jekyll Talk</a>.</p>",
+            "url": "http://localhost:4000/2018/02/11/welcome-to-jekyll.html",
+            
+            
+            
+            
+            
+            "date_published": "2018-02-11T19:58:11-05:00",
+            "date_modified": "2018-02-11T19:58:11-05:00",
+            
+                "author": 
+                "Your Name"
+                
+            
+        }
+    
+    ]
+}

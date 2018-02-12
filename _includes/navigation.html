@@ -1,0 +1,10 @@
+<nav class="main-nav">
+    {% if page.url != "/" %}
+        <a class="normal" href="{{ "/" | relative_url  }}"> <span class="arrow">←</span> Home</a>
+    {% endif %}
+
+    {% if page.url != "/about/" %}
+        <a href="{{ "/" | relative_url  }}about">About</a>
+    {% endif %}
+    <a class="cta" href="https://micro.blog/{{ site.microblog_user }}" rel="me">Also on Micro.blog</a>
+</nav>
