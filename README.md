@@ -2,7 +2,7 @@
 
 #### Demo: [https://mmarfil.com/](https://mmarfil.com/)
 
-## Screeshot
+## Screenshot
 
 ![screenshot](screenshot/home.png)
 
