@@ -6,7 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content="{{ site.author }}" name="author">
   <meta content="{{ site.description }}" name="description">
-  <title>{{ site.title }}{% if page.title == "" %} - Status{% elsif page.url == "/" %}{% else %} - {{ page.title }}{% endif %}</title>
+  {% if page.url == "/" %}
+    <title>{{ site.title }}</title>
+  {% elsif paginator %}
+    <title>{{ site.title }} - Page {{ paginator.page }}</title>
+  {% else %}
+    <title>{{ site.title }} {% assign exist_or_not = page.title | size %} {% if exist_or_not < 1 %} - Status {% else %} - {{ page.title }} {% endif %}</title>
+  {% endif %}
   <link href="{{ "/" | relative_url  }}assets/css/style.css" rel="stylesheet">
   <link href="{{ "/" | relative_url  }}assets/css/highlight.css"rel="stylesheet">
   <link href="{{ "/" | relative_url  }}assets/images/fav32.png" sizes="32x32" rel="icon">
