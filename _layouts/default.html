@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content="{{ site.author }}" name="author">
   <meta content="{{ site.description }}" name="description">
-  <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+  <title>{{ site.title }}{% if page.title == "" %} - Status{% elsif page.url == "/" %}{% else %} - {{ page.title }}{% endif %}</title>
   <link href="{{ "/" | relative_url  }}assets/css/style.css" rel="stylesheet">
   <link href="{{ "/" | relative_url  }}assets/css/highlight.css"rel="stylesheet">
   <link href="{{ "/" | relative_url  }}assets/images/fav32.png" sizes="32x32" rel="icon">
