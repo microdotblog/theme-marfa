@@ -13,7 +13,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 /* Spacing */
-.highlight, .post h1, h3, h4, h5, p, .post-body ul, #post-list li, pre ::before {
+.highlight, .post h1, h2, h3, h4, h5, h6, p, .post-body ul, pre ::before {
 	margin-top: 1em;
 }
 
@@ -99,7 +99,7 @@ nav.main-nav a.cta:hover {
 
 /* Typography */
 
-p {
+p, li {
 	line-height: 1.7;
 }
 
@@ -114,6 +114,7 @@ h1 {
 
 h2 {
 	font-size: 25px;
+	font-weight: bold;
 }
 
 h3 {
@@ -123,16 +124,17 @@ h3 {
 
 h4 {
 	font-size: 19px;
+	font-weight: 500;
 }
 
 h5 {
 	font-size: 15px;
-	font-weight: bold;
+	font-weight: 500;
 }
 
 h6 {
 	font-size: 13px;
-	font-weight: bold;
+	font-weight: 500;
 }
 
 p.small {
@@ -175,11 +177,22 @@ li	{ list-style-type:circle; list-style-position:inside;}
 
 /* Line Height */
 
-.post-body li { padding-left:20px; list-style-type:circle !important; }
+.post-body li {
+	padding-left: 20px;
+	list-style-type: circle !important;
+}
 
-b, strong { font-weight: 500;
-  color: #1E2025; }
-em, i { font-style: italic; }
+.post-body li:last-child {
+	margin-bottom: 1.5em;
+}
+
+b, strong {
+	font-weight: 500;
+  color: #1E2025;
+}
+em, i {
+	font-style: italic;
+}
 
 .post header {
 	text-align:center;
@@ -225,17 +238,15 @@ span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size
 pre	{
 	font-family:Menlo, Monaco, Courier;
 	white-space:pre-wrap;
-	/*border: 1px solid #ddd;*/
 	padding:20px;
 	background-color:#fdfdfd;
-	/*font-size:14px;*/
 	overflow:auto;
 	border-radius: 5px;
 	background: #272b2d;
-	  font-family: "Source Code Pro",Menlo,monospace;
-	  font-size: 13px;
-	  line-height: 1.5em;
-	  font-weight: 500;
+  font-family: "Source Code Pro",Menlo,monospace;
+  font-size: 13px;
+  line-height: 1.5em;
+  font-weight: 500;
 	color: #d0d4d7;
 
 }
@@ -405,7 +416,8 @@ Post List
 	margin-bottom: -5px;
 }
 
-.post h2 {
+h2.headline {
+	margin-top: 0;
 	margin-bottom: 50px;
 }
 
@@ -434,7 +446,6 @@ Post List
 
 	h1 {
 		font-size: 24px;
-		font-weight: bold;
 	}
 
 	h2 {
@@ -443,7 +454,6 @@ Post List
 
 	h3 {
 		font-size: 19px;
-		font-weight: 500;
 	}
 
 	h4 {
@@ -452,11 +462,9 @@ Post List
 
 	h5 {
 		font-size: 14px;
-		font-weight: bold;
 	}
 
 	h6 {
 		font-size: 13px;
-		font-weight: bold;
 	}
 }
