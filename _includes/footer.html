@@ -1,6 +1,16 @@
-<ul>
-  <li><a href="/feed.xml">RSS</a></li>
-  <li><a href="/feed.json">JSON Feed</a></li>
-  <li><a href="https://micro.blog/{{ site.microblog_user }}" rel="me">Micro.blog</a></li>
-  <li><a class="u-email" href="mailto:{{ site.email }}" rel="me">Email</a></li>
-</ul>
+<section id="wrapper">
+  <ul>
+    <li><a href="/feed.xml">RSS</a></li>
+    <li><a href="/feed.json">JSON Feed</a></li>
+    <li><a href="https://micro.blog/{{ site.microblog_user }}" rel="me">Micro.blog</a></li>
+    <li><a class="u-email" href="mailto:{{ site.email }}" rel="me">Email</a></li>
+  </ul>
+  <form method="get" id="search" action="https://duckduckgo.com/">
+    <input type="hidden" name="sites" value="{{ site.url }}"/>
+    <input type="hidden" name="k8" value="#444444"/>
+    <input type="hidden" name="k9" value="#ee4792"/>
+    <input type="hidden" name="kt" value="h"/>
+    <input class="field" type="text" name="q" maxlength="255" placeholder="To search, type and hit Enter&hellip;"/>
+    <input type="submit" value="Search" style="display: none;" />
+  </form>
+</section>
