@@ -330,7 +330,7 @@ Post List
 
 #footer li {
 	display: inline;
-	padding: 50px 10px;
+	padding: 0 10px;
 }
 
 /* Post Page */
@@ -431,7 +431,7 @@ h2.headline {
 	font-weight: 400;
 	padding-left: 12px;
 	border: 2px solid #eee;
-	margin-top: 40px;
+	margin-top: 20px;
 	border-radius: 17px;
 	-webkit-appearance: none;
 }
