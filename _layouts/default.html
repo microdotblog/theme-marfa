@@ -29,7 +29,7 @@
       {% include profile.html %}
   {% endif %}
 
-  <section id="wrapper">
+  <section id="wrapper"{% if page.url == "/about/" %} class="bio"{% endif %}>
     {{ content }}
   </section>
 

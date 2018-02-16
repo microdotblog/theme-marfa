@@ -33,7 +33,7 @@ body {
 .profile #wrapper {
 	max-width: 600px;
 	margin: 0 auto;
-	padding: 70px 25px 80px 25px;
+	padding: 70px 25px 100px 25px;
 	text-align: center;
 }
 
@@ -49,6 +49,10 @@ body {
 	color: #aaa;
 	margin-top: 0;
 	font-weight: 400;
+}
+
+.bio p:first-child {
+	margin-top: 0;
 }
 
 /* Nav */
@@ -442,7 +446,7 @@ h2.headline {
 	.profile #wrapper {
 		max-width: 600px;
 		margin: 0 auto;
-		padding: 60px 25px 20px 25px;
+		padding: 60px 25px 30px 25px;
 		text-align: center;
 	}
 	.post { margin: 40px 0; }
