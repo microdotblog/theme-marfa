@@ -1,27 +1,26 @@
 <ul id="post-list">
-    {% for post in paginator.posts %}
-        <li>
-            <article>
-                <a href="{{ site.baseurl }}/{{ post.url | remove_first: '/' }}" class="u-url"><aside class="dates"><time datetime="{{ post.date }}" class="dt-published">→ {{ post.date | date:"%-I:%M %p, %b %-d" }}</time></aside></a>
-                {% if post.title == "" %}
-                <section class="post-body">
-                    {{ post.content }}
-                </section>
-                {% else %}
-                <header>
-                    <h1><a href="{{ site.baseurl }}/{{ post.url | remove_first: '/' }}">{{ post.title }}</a></h1>
-                </header>
-                <section class="post-body">
-                    {{ post.content }}
-                </section>
-                {% endif %}
-            </article>
-        </li>
-        <span class="separator"><span class="divider"></span></span>
-    {% endfor %}
+  {% for post in paginator.posts %}
+  <li>
+    <article>
+      <a href="{{ site.baseurl }}/{{ post.url | remove_first: '/' }}" class="u-url"><aside class="dates"><time datetime="{{ post.date }}" class="dt-published">→ {{ post.date | date:"%-I:%M %p, %b %-d" }}</time></aside></a>
+      {% if post.title == "" %}
+      <section class="post-body">
+        {{ post.content }}
+      </section>
+      {% else %}
+      <header>
+        <h1><a href="{{ site.baseurl }}/{{ post.url | remove_first: '/' }}">{{ post.title }}</a></h1>
+      </header>
+      <section class="post-body">
+        {{ post.content }}
+      </section>
+      {% endif %}
+    </article>
+  </li>
+  <span class="separator"><span class="divider"></span></span>
+  {% endfor %}
 </ul>
 
-
 {% if paginator.previous_page or paginator.next_page %}
-    {% include pagination.html %}
+  {% include pagination.html %}
 {% endif %}

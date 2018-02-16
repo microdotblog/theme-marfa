@@ -7,11 +7,11 @@
   <meta content="{{ site.author }}" name="author">
   <meta content="{{ site.description }}" name="description">
   {% if page.url == "/" %}
-    <title>{{ site.title }}</title>
+  <title>{{ site.title }}</title>
   {% elsif paginator %}
-    <title>{{ site.title }} - Page {{ paginator.page }}</title>
+  <title>{{ site.title }} - Page {{ paginator.page }}</title>
   {% else %}
-    <title>{{ site.title }} {% assign exist_or_not = page.title | size %} {% if exist_or_not < 1 %} - Status {% else %} - {{ page.title }} {% endif %}</title>
+  <title>{{ site.title }} {% assign exist_or_not = page.title | size %} {% if exist_or_not < 1 %} - Status {% else %} - {{ page.title }} {% endif %}</title>
   {% endif %}
   <link href="{{ "/" | relative_url  }}assets/css/style.css" rel="stylesheet">
   <link href="{{ "/" | relative_url  }}assets/css/highlight.css"rel="stylesheet">
@@ -22,20 +22,15 @@
   <link href="{{ "/" | relative_url  }}feed.xml" title="{{ site.title }}" type="application/rss+xml" rel="alternate">
 </head>
 <body>
-
   {% include navigation.html %}
-
   {% if page.profile %}
-      {% include profile.html %}
+  {% include profile.html %}
   {% endif %}
-
   <section id="wrapper"{% if page.url == "/about/" %} class="bio"{% endif %}>
     {{ content }}
   </section>
-
   <footer id="footer">
     {% include footer.html %}
   </footer>
-
 </body>
 </html>
