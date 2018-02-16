@@ -31,10 +31,9 @@ body {
 /* Profile */
 
 .profile #wrapper {
-	max-width: 600px;
 	margin: 0 auto;
-	padding: 70px 25px 100px 25px;
 	text-align: center;
+	padding: 80px 0;
 }
 
 .profile #avatar {
@@ -93,7 +92,7 @@ nav.main-nav a.cta:hover {
 #wrapper {
 	max-width: 600px;
 	margin: 0 auto;
-	padding: 0 25px 100px 25px;
+	padding: 25px;
 }
 
 .home #avatar {
@@ -151,7 +150,7 @@ code.highlighter-rouge {
 	background-color: #F5F5F5;
 	border-radius: 5px;
 	display: inline-block;
-	padding: 3px 6px;
+	padding: 5px 8px;
 	color: #7F7F7F;
 	font-size: 15px;
 	line-height: 1.35;
@@ -159,6 +158,7 @@ code.highlighter-rouge {
 }
 
 /*Accent color*/
+
 a {
 	text-decoration: none;
 	color: #000;
@@ -180,7 +180,7 @@ nav.main-nav a:hover, #footer a:hover, #post-nav a:hover, p a:hover {
 ul 	{ margin:0; padding:0; }
 li	{ list-style-type:circle; list-style-position:inside;}
 
-/* Line Height */
+/* Post */
 
 .post-body li {
 	padding-left: 20px;
@@ -321,6 +321,14 @@ Post List
 	line-height: 1.35;
 }
 
+/* Footer */
+
+footer #wrapper {
+	margin: 0 auto;
+	text-align: center;
+	padding: 35px 0 80px 0;
+}
+
 #footer {
 	text-align: center;
 }
@@ -337,24 +345,14 @@ Post List
 	padding: 0 10px;
 }
 
-/* Post Page */
-#header {
-	border-bottom: 1px solid #eee;
-}
-
-.post {
-	margin: 120px 0 0 0;
-}
-
 #post-meta {
 	font-size: 13px;
 	font-weight: bold;
 	line-height: 1.4;
 	border-top: 1px solid #eee;
 	padding-top: 40px;
-	margin-bottom: 40px;
 	padding-bottom: 40px;
-	margin-top: 40px;
+	margin-top: 60px;
 	color:#444;
 	border-bottom: 1px solid #eee;
 }
@@ -371,8 +369,16 @@ Post List
 }
 
 #post-meta div {
-	margin: 0 25px 0 0;
 	float: left;
+}
+
+/* Post Page */
+#header {
+	border-bottom: 1px solid #eee;
+}
+
+.post {
+	margin: 120px 0 0 0;
 }
 
 /* Post Navigation */
@@ -442,17 +448,26 @@ h2.headline {
 
 /* Media Queries */
 @media screen and (max-width: 540px) {
-	#wrapper { padding:25px 25px 25px 25px;}
-	.profile #wrapper {
-		max-width: 600px;
-		margin: 0 auto;
-		padding: 60px 25px 30px 25px;
-		text-align: center;
-	}
-	.post { margin: 40px 0; }
-	#footer { margin: 40px 0 0 0;}
 
-	#post-meta { margin-top: 60px; }
+	footer #wrapper {
+		padding: 35px 0 60px 0;
+	}
+
+	.profile #wrapper {
+		margin: 0 auto;
+		text-align: center;
+		padding: 70px 0 40px 0;
+	}
+
+	#post-meta {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		margin-top: 60px;
+	}
+
+	.post {
+		margin: 50px 0;
+	}
 
 	h1 {
 		font-size: 24px;
