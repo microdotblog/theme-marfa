@@ -13,7 +13,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 /* Spacing */
-.highlight, .post h1, h2, h3, h4, h5, h6, p, .post-body ul, .post-body li, .bio li, pre ::before {
+.highlight, .post h1, h2, h3, h4, h5, h6, p, .post-body ul, .post-body li, .bio li, video, pre ::before {
 	margin-top: 1em;
 }
 
