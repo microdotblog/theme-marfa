@@ -13,7 +13,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 /* Spacing */
-.highlight, .post h1, h2, h3, h4, h5, h6, p, .post-body ul, .post-body li, .bio li, video, pre ::before {
+.highlight, .post h1, h2, h3, p, .post-body ul, .dates, .post-body li, .bio li, video, pre ::before {
 	margin-top: 1em;
 }
 
@@ -40,7 +40,7 @@ body {
 	display: inline-block;
 	width: 80px;
 	height: 80px;
-	margin-bottom: 20px;
+	margin-bottom: 1em;
 	border-radius: 40px;
 }
 
@@ -52,6 +52,10 @@ body {
 
 .bio p:first-child {
 	margin-top: 0;
+}
+
+.bio li {
+	list-style-position: outside;
 }
 
 /* Nav */
@@ -107,7 +111,7 @@ p, li {
 	line-height: 1.7;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
 	color: #000;
 }
 
@@ -118,26 +122,11 @@ h1 {
 
 h2 {
 	font-size: 25px;
-	font-weight: bold;
+	font-weight: 600;
 }
 
 h3 {
-	font-size: 23px;
-	font-weight: 500;
-}
-
-h4 {
-	font-size: 19px;
-	font-weight: 500;
-}
-
-h5 {
-	font-size: 15px;
-	font-weight: 500;
-}
-
-h6 {
-	font-size: 13px;
+	font-size: 20px;
 	font-weight: 500;
 }
 
@@ -316,8 +305,8 @@ Post List
 	margin-bottom: 0;
 }
 
-#post-list h1 {
-	padding-top: 17px;
+#post-list h2 {
+	margin-top: 0;
 	line-height: 1.35;
 }
 
@@ -348,7 +337,7 @@ footer #wrapper {
 #post-meta {
 	font-size: 13px;
 	font-weight: bold;
-	line-height: 1.4;
+	line-height: 1.5;
 	border-top: 1px solid #eee;
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -424,7 +413,7 @@ footer #wrapper {
 	color: #bbb;
 	width: 100%;
 	text-transform: uppercase;
-	margin-bottom: -5px;
+	padding-top: 5px;
 }
 
 h2.headline {
@@ -481,15 +470,4 @@ h2.headline {
 		font-size: 19px;
 	}
 
-	h4 {
-		font-size: 17px;
-	}
-
-	h5 {
-		font-size: 14px;
-	}
-
-	h6 {
-		font-size: 13px;
-	}
 }
