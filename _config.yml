@@ -1,16 +1,3 @@
-title: "Blog Title"
-author: "Your Name"
-description: "A short description."
-baseurl: ""
-url: "https://site.url"
-email: "email@site.url"
-microblog_user: "joe"
-permalink: "/:year/:month/:day/:title.html"
-relative_permalinks: false
-paginate: 20
-paginate_path: "/page/:num/"
-timezone: America/New_York # A list of all available values can be found at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
 highlighter: "rouge"
 markdown: "kramdown"
 

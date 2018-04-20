@@ -1,0 +1,15 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rsd xmlns="http://archipelago.phrasewise.com/rsd" version="1.0">
+	<service>
+		<engineName>Micro.blog</engineName>
+		<engineLink>https://micro.blog/</engineLink>
+		<homePageLink>https://micro.blog/</homePageLink>
+		<apis>
+			<api name="Micro.blog" blogID="{{ site.site_id }}" preferred="true" apiLink="https://micro.blog/xmlrpc"/>
+			<api name="MetaWeblog" blogID="{{ site.site_id }}" preferred="false" apiLink="https://micro.blog/xmlrpc"/>
+		</apis>
+	</service>
+</rsd>

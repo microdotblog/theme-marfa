@@ -2,7 +2,7 @@
   {% for post in paginator.posts %}
   <li>
     <article>
-      {% if post.title == "" %}
+      {% if post.microblog == true %}
       <section class="post-body">
         {{ post.content }}
       </section>

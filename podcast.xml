@@ -1,0 +1,33 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+	<itunes:image href="https://micro.blog/{{ site.username }}/podcast.png" />
+	<itunes:category text="{{ site.itunes_category | xml_escape }}">
+		<itunes:category text="{{ site.itunes_subcategory | xml_escape }}"></itunes:category>
+	</itunes:category>
+	<itunes:explicit>no</itunes:explicit>		
+	<language>en</language>
+    {% for post in site.posts limit:200 %}
+		{% if post.audio contains "mp3" %}
+		  <item>
+			<title>{{ post.title | xml_escape }}</title>
+			<description>{{ post.content | xml_escape }}</description>
+			<itunes:subtitle>{{ post.content | xml_escape }}</itunes:subtitle>
+			<itunes:summary>{{ post.content | xml_escape }}</itunes:summary>
+			<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+			<link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
+			<guid isPermaLink="true">{{ post.guid }}</guid>
+			<enclosure url="{{ post.audio }}" type="audio/mpeg"></enclosure>
+		  </item>
+		{% endif %}
+    {% endfor %}
+  </channel>
+</rss>

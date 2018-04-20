@@ -85,6 +85,7 @@ nav.main-nav a.cta {
 	border: 2px solid #fcdae9;
 	border-bottom: none;
 	border-radius: 20px;
+	white-space: nowrap;
 }
 
 nav.main-nav a.cta:hover {
@@ -289,6 +290,7 @@ thead th,th {
 img {
 	width: 100%;
 	max-width: 100%;
+	height: auto;
 	border-radius: 5px;
 }
 
