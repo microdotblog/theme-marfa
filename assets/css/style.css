@@ -21,6 +21,11 @@
 
 /* Base */
 
+:root {
+  --theme-text-color: #ee4792;
+  --theme-highlight-color: #fcdae9;
+}
+
 html, body {
 	height: 100%;
 	margin: 0;
@@ -97,16 +102,16 @@ nav.main-nav a {
 }
 nav.main-nav a.cta {
 	background: #fff;
-	color: #ee4792;
+	color: var(--theme-text-color);
 	padding: 6px 16px;
-	border: 2px solid #fcdae9;
+	border: 2px solid var(--theme-highlight-color);
 	border-bottom: none;
 	border-radius: 20px;
 }
 
 nav.main-nav a.cta:hover {
-	background: #fcdae9;
-	color: #ee4792;
+	background: var(--theme-highlight-color);
+	color: var(--theme-text-color);
 	margin-left: 12px;
 }
 
@@ -157,13 +162,13 @@ a {
 	text-decoration: none;
 	color: #000;
 	font-weight: 500;
-	box-shadow: inset 0 -2px 0 #fcdae9;
+	box-shadow: inset 0 -2px 0 var(--theme-highlight-color);
 	transition: all .35s;
   transition-timing-function: cubic-bezier(.7, 0, .3, 1);
 }
 
 a:hover {
-	box-shadow: inset 0 -25px 0 #fcdae9;
+	box-shadow: inset 0 -25px 0 var(--theme-highlight-color);
 }
 
 /* Post */
