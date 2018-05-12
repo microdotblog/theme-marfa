@@ -13,6 +13,7 @@ layout: null
 	<itunes:category text="{{ site.itunes_category | xml_escape }}">
 		<itunes:category text="{{ site.itunes_subcategory | xml_escape }}"></itunes:category>
 	</itunes:category>
+	<itunes:author>{{ site.itunes_author | xml_escape }}</itunes:author>
 	<itunes:explicit>no</itunes:explicit>		
 	<language>en</language>
     {% for post in site.posts limit:200 %}
