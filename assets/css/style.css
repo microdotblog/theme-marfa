@@ -174,12 +174,15 @@ li	{ list-style-type:circle; list-style-position:inside;}
 
 .post-body li {
 	padding-left: 20px;
-	list-style-type: circle !important;
 }
 
 .post-body li:last-child {
 	margin-bottom: 1.5em;
 }
+
+.post-body ol li {
+  list-style-type: decimal;
+}  
 
 b, strong {
 	font-weight: 500;
@@ -187,6 +190,11 @@ b, strong {
 }
 em, i {
 	font-style: italic;
+}
+
+sup { 
+    vertical-align: super;
+    font-size: smaller;
 }
 
 .post header {
