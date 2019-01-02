@@ -18,6 +18,9 @@
 
 	<link rel="shortcut icon" href="https://micro.blog/{{ site.username }}/favicon.png" type="image/x-icon" />
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  {% if site.podcast %}
+  <link rel="alternate" type="application/rss+xml" title="Podcast" href="{{ "/podcast.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  {% endif %}
   <link rel="alternate" type="application/json" title="{{ site.title }}" href="{{ "/feed.json" | prepend: site.baseurl | prepend: site.url }}" />
   <link rel="EditURI" type="application/rsd+xml" href="{{ site.baseurl }}/rsd.xml" />
 
@@ -31,8 +34,8 @@
   {% if site.instagram_username != "" %}
   	<link rel="me" href="https://instagram.com/{{ site.instagram_username }}" />
   {% endif %}
-  <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
-  <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+  <link rel="authorization_endpoint" href="https://micro.blog/indieauth/auth" />
+  <link rel="token_endpoint" href="https://micro.blog/indieauth/token" />
   <link rel="micropub" href="https://micro.blog/micropub" />
   <link rel="webmention" href="https://micro.blog/webmention" />
   <link rel="subscribe" href="https://micro.blog/users/follow" />
@@ -49,5 +52,6 @@
   <footer id="footer">
     {% include footer.html %}
   </footer>
+  {% include custom_footer.html %}
 </body>
 </html>

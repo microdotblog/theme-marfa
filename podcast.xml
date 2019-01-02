@@ -1,11 +1,12 @@
 ---
 layout: null
+regenerate: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
     <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
+    <description>{{ site.itunes_description | xml_escape }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
@@ -15,6 +16,10 @@ layout: null
 	</itunes:category>
 	<itunes:author>{{ site.itunes_author | xml_escape }}</itunes:author>
 	<itunes:explicit>no</itunes:explicit>		
+	<itunes:owner>
+		<itunes:name>{{ site.itunes_author | xml_escape }}</itunes:name>
+		<itunes:email>{{ site.itunes_email | xml_escape }}</itunes:email>
+	</itunes:owner>
 	<language>en</language>
     {% for post in site.posts limit:200 %}
 		{% if post.audio contains "mp3" %}

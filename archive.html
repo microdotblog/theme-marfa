@@ -1,0 +1,24 @@
+---
+layout: default
+title: Archive
+permalink: /archive/
+order: 0
+navigation: true
+---
+
+<div class="h-feed">
+
+{% for post in site.posts %}
+	<p class="h-entry">
+		<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" class="u-url"><span class="dt-published" datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</span></a>:
+
+		{% if post.microblog == false %}
+			<span class="p-name"><b>{{ post.title }}</b></span> 
+			<span class="p-summary">{{ post.content | strip_html | truncatewords: 10 }}</span>
+		{% else %}
+			<span class="p-summary">{{ post.content | strip_html | truncatewords: 10 }}</span>
+		{% endif %}
+	</p>
+{% endfor %}
+
+</div>

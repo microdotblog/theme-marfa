@@ -1,21 +1,21 @@
 ---
 layout: null
-regenerate: true
+permalink: /archive/index.json
 ---
 {
 	"version": "https://jsonfeed.org/version/1",
 	"title": {{ site.name | jsonify }},
 	"icon": "https://micro.blog/{{ site.username }}/avatar.jpg",
 	"home_page_url": "{{ site.url }}/",
-	"feed_url": "{{ site.url }}/feed.json",
+	"feed_url": "{{ site.url }}/archive/index.json",
 	"items": [
-		{% for post in site.posts limit:25 %}
+		{% for post in site.posts %}
 		{
 			"id": "{{ post.guid }}",
 	      	{% if post.microblog == false %}
 			"title": {{ post.title | jsonify }},
 			{% endif %}
-			"content_html": {{ post.content | jsonify }},
+			"content_text": {{ post.content | strip_html | truncatewords: 10 | jsonify }},
 			"date_published": "{{ post.date | date_to_xmlschema }}",
 			"url": "{{ site.url }}{{ post.url }}"
 		}{% if forloop.last == false %},{% endif %}

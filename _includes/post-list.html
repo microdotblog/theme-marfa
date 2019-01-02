@@ -1,5 +1,5 @@
 <ul id="post-list">
-  {% for post in paginator.posts %}
+  {% for post in site.posts limit:25 %}
   <li>
     <article>
       {% if post.microblog == true %}
@@ -24,7 +24,3 @@
   <span class="separator"><span class="divider"></span></span>
   {% endfor %}
 </ul>
-
-{% if paginator.previous_page or paginator.next_page %}
-  {% include pagination.html %}
-{% endif %}

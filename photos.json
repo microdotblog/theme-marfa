@@ -1,0 +1,28 @@
+---
+layout: null
+permalink: /photos/index.json
+---
+{
+	"version": "https://jsonfeed.org/version/1",
+	"title": {{ site.name | jsonify }},
+	"icon": "https://micro.blog/{{ site.username }}/avatar.jpg",
+	"home_page_url": "{{ site.url }}/",
+	"feed_url": "{{ site.url }}/photos/index.json",
+	"items": [
+		{% assign photo_posts = site.posts | where_exp: "post", "post.photo contains 'jpg'" %}
+		{% for post in photo_posts %}{
+			"id": "{{ post.guid }}",
+			{% if post.microblog == false %}
+			"title": {{ post.title | jsonify }},
+			{% endif %}
+			"content_text": {{ post.content | jsonify }},
+			"date_published": "{{ post.date | date_to_xmlschema }}",
+			"url": "{{ site.url }}{{ post.url }}",
+			"image": "{{post.photo}}",
+			"_microblog": {
+				"thumbnail_url": "https://photos.micro.blog/400/{{post.photo}}"
+			}
+		}{% if forloop.last == false %},
+		{% endif %}{% endfor %}
+	]
+}
