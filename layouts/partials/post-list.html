@@ -1,0 +1,31 @@
+<ul id="post-list">
+
+{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 10) }}
+{{ range $paginator.Pages  }}
+
+  <li>
+    <article>
+      {{ if .Title }}
+      <section class="post-body">
+        {{ .Content }}
+      </section>
+      {{ else }}
+      <header>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      </header>
+      <section class="post-body">
+        {{ .Content }}
+      </section>
+      {{ end }}
+      <a href="{{ .Permalink }}" class="u-url">
+        <aside class="dates">
+          <time datetime="{{ .Date }}" class="dt-published">→ {{ .Date.Format "3:04 AM, JAN 2" }}</time>
+        </aside>
+      </a>
+    </article>
+  </li>
+  <span class="separator"><span class="divider"></span></span>
+
+{{ end }}
+
+</ul>

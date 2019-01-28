@@ -1,0 +1,11 @@
+<div class="profile">
+  <section id="wrapper">
+    <header class="h-card">
+      <a class="u-url" href="/about/">
+        <img id="avatar" src="{{ .Site.Author.avatar }}"/>
+      </a>
+      <h1 class="p-name" rel="me">{{ .Site.Author.name }}</h1>
+      <h4 class="p-role">{{ .Site.Params.description | safeHTML }}</h4>
+    </header>
+  </section>
+</div>
