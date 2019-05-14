@@ -5,9 +5,12 @@
   <meta content="{{ .Site.Author.name }}" name="author">
 
   <title>
-      {{ block "title" . }}
-      {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Site.Title }} - {{ .Title }}{{ end }}
-      {{ end }}
+      {{- block "title" . -}}
+		{{- .Site.Title -}}
+		{{- if .Title }}
+		- {{ .Title }}
+		{{- end -}}
+      {{- end -}}
   </title>
 
   <link href="{{ "assets/css/style.css" | relURL }}" rel="stylesheet">
@@ -36,6 +39,7 @@
 	<link rel="authorization_endpoint" href="https://micro.blog/indieauth/auth" />
 	<link rel="token_endpoint" href="https://micro.blog/indieauth/token" />
 	<link rel="micropub" href="https://micro.blog/micropub" />
+	<link rel="microsub" href="https://micro.blog/microsub" />
 	<link rel="webmention" href="https://micro.blog/webmention" />
 	<link rel="subscribe" href="https://micro.blog/users/follow" />
 </head>

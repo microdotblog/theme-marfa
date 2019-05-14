@@ -184,6 +184,10 @@ li	{ list-style-type:circle; list-style-position:inside;}
   list-style-type: decimal;
 }  
 
+.post-body ul li {
+	list-style-type: disc;
+}
+
 b, strong {
 	font-weight: 500;
   color: #1E2025;
@@ -480,4 +484,8 @@ h2.headline {
 		font-size: 19px;
 	}
 
+}
+
+video {
+	max-width: 100%;
 }
