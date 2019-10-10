@@ -172,20 +172,18 @@ li	{ list-style-type:circle; list-style-position:inside;}
 
 /* Post */
 
-.post-body li {
-	padding-left: 20px;
-}
-
 .post-body li:last-child {
 	margin-bottom: 1.5em;
 }
 
 .post-body ol li {
-  list-style-type: decimal;
+	list-style-type: decimal;
+	padding-left: 20px;
 }  
 
 .post-body ul li {
 	list-style-type: disc;
+	padding-left: 20px;
 }
 
 b, strong {
@@ -210,6 +208,7 @@ blockquote {
 	border-left: 2px solid #eee;
 	opacity: 0.8;
 	font-style: italic;
+  	margin-top: 15px;
 }
 
 hr {
@@ -255,7 +254,7 @@ pre	{
   line-height: 1.5em;
   font-weight: 500;
 	color: #d0d4d7;
-
+  margin-top: 15px;
 }
 
 table {
@@ -488,4 +487,57 @@ h2.headline {
 
 video {
 	max-width: 100%;
+}
+
+/* The main wrapper for pagination links */
+.pagination {
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+	font-size: 13px;
+	color: #bbb;
+    text-align: center;
+}
+
+.pagination a {
+}
+
+/* Push the previous/next links out to the left/right */
+.older-posts,
+.newer-posts {
+    position: absolute;
+    display: inline-block;
+}
+
+.older-posts {
+    right: 0;
+}
+
+.page-number {
+    display: inline-block;
+    padding: 2px 0;
+    min-width: 100px;
+}
+
+.newer-posts {
+    left: 0;
+}
+
+.older-posts:hover,
+.newer-posts:hover {
+}
+
+.extra-pagination {
+    display: none;
+}
+
+.extra-pagination .pagination {
+    width: auto;
+}
+
+/* On page2+ show extra pagination controls at the top of post list */
+.paged .extra-pagination {
+    display: block;
 }

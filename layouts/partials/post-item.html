@@ -1,0 +1,22 @@
+<li>
+<article>
+  {{ if .Title }}
+  <section class="post-body">
+  <header>
+	<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  </header>
+  <section class="post-body">
+	{{ .Content }}
+  </section>
+  </section>
+  {{ else }}
+	{{ .Content }}
+  {{ end }}
+  <a href="{{ .Permalink }}" class="u-url">
+	<aside class="dates">
+	  <time datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}" class="dt-published">→ {{ .Date.Format "3:04 PM, Jan 2" }}</time>
+	</aside>
+  </a>
+</article>
+</li>
+<span class="separator"><span class="divider"></span></span>
