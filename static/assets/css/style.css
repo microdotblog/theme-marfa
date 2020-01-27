@@ -541,3 +541,7 @@ video {
 .paged .extra-pagination {
     display: block;
 }
+
+article #post-list li {
+	list-style-type: disc;
+}

@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+	<div class="profile">
+		<section id="wrapper">
+  
+		{{ if .Site.Params.paginate_replies }}
+			<header>
+				<h1 class="p-name">Replies</h1>
+			</header>
+		{{ else }}
+			<header>
+				<h1 class="p-name">Recent Replies</h1>
+			</header>
+		{{ end }}
+
+		</section>
+	</div>
+		  
+	<ul id="post-list">
+
+	{{ if .Site.Params.paginate_replies }}
+		{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "reply") }}
+		{{ $list := $paginator.Pages }}
+		{{ range $list  }}
+			{{ partial "post-item.html" . }}
+		{{ end }}
+	{{ else }}
+		{{ $list := first 25 (where .Data.Pages.ByDate.Reverse "Type" "reply") }}
+		{{ range $list  }}
+			{{ partial "post-item.html" . }}
+		{{ end }}
+	{{ end }}
+
+	</ul>
+
+	{{ if .Site.Params.paginate_replies }}
+		{{ partial "pagination" . }}
+	{{ end }}
+
+{{ end }}

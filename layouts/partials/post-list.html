@@ -1,6 +1,6 @@
 <ul id="post-list">
 
-{{ if or .Params.enable_pagination .IsHome }}
+{{ if or .IsHome .Site.Params.paginate_categories }}
 	{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") }}
 	{{ $list := $paginator.Pages }}
 	{{ range $list  }}
@@ -15,6 +15,10 @@
 
 </ul>
 
-{{ if .Params.enable_pagination }}
+{{ if .IsHome }}
+	{{ if .Site.Params.paginate_home }}
+		{{ partial "pagination" . }}
+	{{ end }}
+{{ else if .Site.Params.paginate_categories }}
 	{{ partial "pagination" . }}
 {{ end }}
