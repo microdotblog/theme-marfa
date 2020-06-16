@@ -176,14 +176,22 @@ li	{ list-style-type:circle; list-style-position:inside;}
 	margin-bottom: 1.5em;
 }
 
-.post-body ol li {
+article ol li {
 	list-style-type: decimal;
 	padding-left: 20px;
 }  
 
-.post-body ul li {
+article ul li {
 	list-style-type: disc;
 	padding-left: 20px;
+}
+
+.post-body ol li {
+	list-style-type: decimal !important;
+}
+
+.post-body ul li {
+	list-style-type: disc !important;
 }
 
 b, strong {
@@ -542,6 +550,8 @@ video {
     display: block;
 }
 
+/* 
 article #post-list li {
 	list-style-type: disc;
 }
+ */

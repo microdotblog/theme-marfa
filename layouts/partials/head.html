@@ -13,9 +13,9 @@
       {{- end -}}
   </title>
 
-  <link href="{{ "assets/css/style.css" | relURL }}" rel="stylesheet">
-  <link href="{{ "assets/css/highlight.css" | relURL }}" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "custom.css" | relURL }}">
+  <link href="{{ "assets/css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}" rel="stylesheet">
+  <link href="{{ "assets/css/highlight.css" | relURL }}?{{ .Site.Params.theme_seconds }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "custom.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
 
 	<link rel="shortcut icon" href="https://micro.blog/{{ .Site.Author.username }}/favicon.png" type="image/x-icon" />
 
