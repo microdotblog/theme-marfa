@@ -13,19 +13,19 @@
   <section class="e-content post-body">
       {{ .Content }}
   </section>
+
+  {{ if .Site.Params.include_conversation }}
+  <script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
+  {{ end }}
+
+  <section id="post-meta" class="clearfix p-author h-card">
+    <a href="/" class="u-url">
+      <img class="u-photo avatar" src="{{ .Site.Author.avatar }}" width="96" height="96">
+      <div>
+        <span class="p-name dark">{{ .Site.Author.name }}</span>
+        <span><a href="https://micro.blog/{{ .Site.Author.username }}">@{{ .Site.Author.username }}</a></span>
+      </div>
+    </a>
+  </section>
 </article>
-
-{{ if .Site.Params.include_conversation }}
-<script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
-{{ end }}
-
-<section id="post-meta" class="clearfix">
-  <a href="/">
-    <img class="u-photo avatar" src="{{ .Site.Author.avatar }}" width="96" height="96">
-    <div>
-      <span class="p-author h-card dark">{{ .Site.Author.name }}</span>
-      <span><a href="https://micro.blog/{{ .Site.Author.username }}">@{{ .Site.Author.username }}</a></span>
-    </div>
-  </a>
-</section>
 {{ end }}
