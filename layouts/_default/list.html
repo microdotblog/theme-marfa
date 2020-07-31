@@ -1,3 +1,10 @@
 {{ define "main" }}
+  {{ if ne .IsHome true }}
+  <section id="wrapper">
+    <header>
+      <h1>{{- if .Title }}{{ .Title }}{{- end -}}</h1>
+    </header>
+  </section>
+  {{ end }}
   {{ partial "post-list.html" . }}
 {{ end }}
