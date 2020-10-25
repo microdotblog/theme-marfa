@@ -318,11 +318,11 @@ Post List
 =========================================== */
 
 
-#post-list li {
+#post-list > li {
 	list-style-type: none;
 }
 
-#post-list li:last-child {
+#post-list > li:last-child {
 	margin-bottom: 0;
 }
 
