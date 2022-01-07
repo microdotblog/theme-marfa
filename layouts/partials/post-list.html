@@ -1,13 +1,13 @@
 <ul id="post-list">
 
 {{ if or .IsHome .Site.Params.paginate_categories }}
-	{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") }}
+	{{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") }}
 	{{ $list := $paginator.Pages }}
 	{{ range $list  }}
 		{{ partial "post-item.html" . }}
 	{{ end }}
 {{ else }}
-	{{ $list := where .Data.Pages.ByDate.Reverse "Type" "post" }}
+	{{ $list := where .Site.Pages.ByDate.Reverse "Type" "post" }}
 	{{ range $list  }}
 		{{ partial "post-item.html" . }}
 	{{ end }}
