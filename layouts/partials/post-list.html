@@ -7,7 +7,7 @@
 		{{ partial "post-item.html" . }}
 	{{ end }}
 {{ else }}
-	{{ $list := where .Site.Pages.ByDate.Reverse "Type" "post" }}
+	{{ $list := where .Pages.ByDate.Reverse "Type" "post" }}
 	{{ range $list  }}
 		{{ partial "post-item.html" . }}
 	{{ end }}
