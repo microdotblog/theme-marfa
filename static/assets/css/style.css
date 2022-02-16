@@ -194,6 +194,10 @@ article ul li {
 	list-style-type: disc !important;
 }
 
+article img {
+  padding: 20px 0px 20px 0px;	
+}
+
 b, strong {
 	font-weight: 500;
   color: #1E2025;
@@ -423,7 +427,8 @@ footer #wrapper {
   float: left;
   margin-right: 15px;
   box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
-	border-radius: 50%;
+  border-radius: 50%;
+  padding: 0px;
 }
 
 /* Others */
