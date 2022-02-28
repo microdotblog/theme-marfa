@@ -570,6 +570,7 @@ article #post-list li {
 .microblog_post {
   padding-top: 20px;
   padding-bottom: 20px;
+  padding: 0px;
 }
 
 .microblog_avatar {
@@ -587,3 +588,17 @@ article #post-list li {
   color: gray;
   text-decoration: none;
 }
+
+.bookshelf_book {
+  padding-bottom: 7px;
+}
+
+.bookshelf_book img {
+  margin-right: 3px;
+  padding-top: 0px;
+}
+
+.bookshelf_title {
+  font-weight: 500;
+}
+
