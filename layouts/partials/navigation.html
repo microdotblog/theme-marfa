@@ -4,8 +4,8 @@
   {{ end }}
 
 	{{ range .Site.Menus.main }}
-		{{ if .Page.Params.redirect_url }}
-			<a href="{{ .Page.Params.redirect_url }}">{{ .Name }}</a>
+		{{ if .Page.Params.redirect }}
+			<a href="{{ .Page.Params.redirect }}">{{ .Name }}</a>
 		{{ else }}
 			<a href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
 		{{ end }}
