@@ -562,31 +562,35 @@ article #post-list li {
  */
 
 .microblog_conversation {
-  margin-top: 50px;
-  padding-top: 20px;
-  border-top: 1px solid lightgray;
+	margin-top: 50px;
+	padding-top: 20px;
+	border-top: 1px solid lightgray;
 }
 
 .microblog_post {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding: 0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .microblog_avatar {
-  border-radius: 10px;
-  vertical-align: top;
+	border-radius: 10px;
+	vertical-align: top;
+	padding: 0px;
+}
+
+.microblog_text {
+	margin-top: 1em;
 }
 
 .microblog_time {
-  font-size: 13px;
-  padding-top: 10px;
-  color: gray;
+	font-size: 13px;
+	padding-top: 10px;
+	color: gray;
 }
 
 .microblog_time a {
-  color: gray;
-  text-decoration: none;
+	color: gray;
+	text-decoration: none;
 }
 
 .bookshelf_book {
