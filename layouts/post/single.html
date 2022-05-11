@@ -1,43 +1,39 @@
-{{ define "main" }}
+{{ define "main" -}}
 <article class="h-entry post">
   <header>
-	{{ with .Title }}
+    {{ with .Title -}}
     <h1 class="p-name">{{ . }}</h1>
-    {{ end }}
+    {{- end }}
     <h2 class="headline">
-      <time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">
+      <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-0700" }}">
         <a class="u-url dates" href="{{ .Permalink }}">{{ .Date.Format "Jan 2, 2006" }}</a>
       </time>
     </h2>
   </header>
   <section class="e-content post-body">
-      {{ .Content }}
+      {{- .Content -}}
   </section>
 
-  {{ if .Site.Params.include_conversation }}
+  {{ if .Site.Params.include_conversation -}}
   <script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
-  {{ end }}
+  {{- end }}
 
-  <section id="post-meta" class="clearfix p-author h-card">
-    <a href="/" class="u-url">
-  	{{ if .Params.author }}
-		<img class="u-photo avatar" src="{{ .Params.author.avatar }}" width="96" height="96">
-		<div>
-		  <span class="p-name dark">{{ .Params.author.name }}</span>
-		  <span><a href="https://micro.blog/{{ .Params.author.username }}">@{{ .Params.author.username }}</a></span>
-		</div>
-  	{{ else }}
-		<img class="u-photo avatar" src="{{ .Site.Author.avatar }}" width="96" height="96">
-		<div>
-		  <span class="p-name dark">{{ .Site.Author.name }}</span>
-		  <span><a href="https://micro.blog/{{ .Site.Author.username }}">@{{ .Site.Author.username }}</a></span>
-		</div>
-	{{ end }}
+  <footer id="post-meta" class="clearfix p-author h-card">
+    <a href="/">
+      {{- if .Params.author }}
+      <img class="u-photo avatar" src="{{ .Params.author.avatar }}" width="96" height="96">
+      <div>
+        <span class="p-name dark">{{ .Params.author.name }}</span>
+        <span><a rel="author" class="u-url" href="https://micro.blog/{{ .Params.author.username }}">@{{ .Params.author.username }}</a></span>
+      </div>
+      {{- else -}}
+      <img class="u-photo avatar" src="{{ .Site.Author.avatar }}" width="96" height="96">
+      <div>
+        <span class="p-name dark">{{ .Site.Author.name }}</span>
+        <span><a rel="author" class="u-url" href="https://micro.blog/{{ .Site.Author.username }}">@{{ .Site.Author.username }}</a></span>
+      </div>
+      {{ end -}}
     </a>
-  </section>
+  </footer>
 </article>
-{{ end }}
-
-
-
-
+{{- end }}

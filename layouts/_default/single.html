@@ -1,19 +1,21 @@
-{{ define "main" }}
+{{ define "main" -}}
 <article class="h-entry post">
   <header>
-    <h1 class="p-name">{{ .Title }}</h1>
+    {{ with .Title -}}
+    <h1 class="p-name">{{ . }}</h1>
+    {{- end }}
   </header>
   <section class="e-content post-body">
-      {{ .Content }}
+      {{- .Content -}}
   </section>
+  <footer id="post-meta" class="clearfix p-author h-card">
+    <a href="/">
+      <img class="u-photo avatar" src="{{ .Site.Author.avatar }}" width="96" height="96">
+      <div>
+        <span class="p-name dark">{{ .Site.Author.name }}</span>
+        <span><a rel="author" class="u-url" href="https://micro.blog/{{ .Site.Author.username }}">@{{ .Site.Author.username }}</a></span>
+      </div>
+    </a>
+  </footer>
 </article>
-<section id="post-meta" class="clearfix">
-  <a href="/">
-    <img class="u-photo avatar" src="{{ .Site.Author.avatar }}" width="96" height="96">
-    <div>
-      <span class="p-author h-card dark">{{ .Site.Author.name }}</span>
-      <span><a href="https://micro.blog/{{ .Site.Author.username }}">@{{ .Site.Author.username }}</a></span>
-    </div>
-  </a>
-</section>
-{{ end }}
+{{- end }}
