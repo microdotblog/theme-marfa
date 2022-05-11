@@ -1,7 +1,7 @@
 <aside class="profile">
   <header class="h-card">
     <a class="u-url" href="/about">
-      <img id="avatar" class="u-photo" src="{{ .Site.Author.avatar }}" width="96" height="96" />
+      <img id="avatar" class="u-photo avatar" src="{{ .Site.Author.avatar }}" width="96" height="96" alt="{{ .Site.Author.name }}" />
     </a>
     <h1 class="p-name" rel="me">{{ .Site.Author.name }}</h1>
     <h4 class="p-role">{{ .Site.Params.description | safeHTML }}</h4>
