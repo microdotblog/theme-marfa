@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-{{ partial "head.html" . }}
-<body>
-  {{ partial "header.html" . }}
-  <main id="wrapper" {{ if eq .File.Dir "about/" }} class="bio" {{ end }}>
-    {{- block "main" . -}}{{- end -}}
-  </main>
-  {{ partial "footer.html" . }}
-  {{ partial "custom_footer.html" . }}
-  {{ range .Site.Params.plugins_js -}}
-    <script src="{{ . }}"></script>
-  {{- end }}
-</body>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "header.html" . }}
+    <main class="page-content wrapper {{ if eq .File.Dir "about/" }} bio {{ end }}">
+      {{- block "main" . -}}{{- end -}}
+    </main>
+    {{ partial "footer.html" . }}
+    {{ partial "custom_footer.html" . }}
+    {{ range .Site.Params.plugins_js -}}
+      <script src="{{ . }}"></script>
+    {{- end }}
+  </body>
 </html>
