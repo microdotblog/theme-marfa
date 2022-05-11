@@ -1,10 +1,10 @@
 <li>
   <article class="h-entry post">
-    {{- with .Title }}
     <header>
+    {{ with .Title -}}
     <h2 class="p-name"><a href="{{ .Permalink }}">{{ . }}</a></h2>
+    {{- end }}
     </header>
-    {{ end -}}
     <section class="e-content post-body">
     {{- .Content -}}
     </section>
