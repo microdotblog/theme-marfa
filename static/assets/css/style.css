@@ -352,7 +352,7 @@ footer {
 	padding: 0 10px;
 }
 
-#post-meta {
+.post-meta {
 	font-size: 13px;
 	font-weight: bold;
 	line-height: 1.5;
@@ -364,18 +364,18 @@ footer {
 	border-bottom: 1px solid #eee;
 }
 
-#post-meta div span {
+.post-meta div span {
 	color: #aaa;
 	font-weight: 500;
 	display: block;
 }
 
-#post-meta div span.dark {
+.post-meta div span.dark {
 	color: #1E2025;
 
 }
 
-#post-meta div {
+.post-meta div {
 	float: left;
 }
 
@@ -414,7 +414,7 @@ footer {
 	padding: 1px;
 }
 
-#post-meta img.avatar {
+.post-meta img.avatar {
   height: 36px;
   width: 36px;
   float: left;
@@ -467,7 +467,7 @@ h2.headline {
 		padding: 70px 0 40px 0;
 	}
 
-	#post-meta {
+	.post-meta {
 		padding-top: 30px;
 		padding-bottom: 30px;
 		margin-top: 60px;
