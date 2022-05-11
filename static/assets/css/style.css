@@ -179,7 +179,7 @@ li	{ list-style-type:circle; list-style-position:inside;}
 article ol li {
 	list-style-type: decimal;
 	padding-left: 20px;
-}  
+}
 
 article ul li {
 	list-style-type: disc;
@@ -195,7 +195,7 @@ article ul li {
 }
 
 article img {
-  padding: 20px 0px 20px 0px;	
+  padding: 20px 0px 20px 0px;
 }
 
 b, strong {
@@ -206,7 +206,7 @@ em, i {
 	font-style: italic;
 }
 
-sup { 
+sup {
     vertical-align: super;
     font-size: smaller;
 }
@@ -555,7 +555,7 @@ video {
     display: block;
 }
 
-/* 
+/*
 article #post-list li {
 	list-style-type: disc;
 }
