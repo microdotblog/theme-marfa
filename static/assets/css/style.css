@@ -233,22 +233,15 @@ hr {
 	text-align: center;
 }
 
-span.separator {
-	display: block;
+article.post {
 	margin: 42px 0 48px 0;
-	width: 100%;
 }
 
-span.divider {
+article.post::after {
 	display: block;
-	width: 100%;
+	content: '';
 	background-color: #eee;
 	height: 1px;
-	margin: 0 auto;
-}
-
-span.separator:last-child {
-	display: none;
 }
 
 span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
