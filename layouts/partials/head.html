@@ -49,4 +49,7 @@
   {{ range $filename := .Site.Params.plugins_html -}}
     {{ partial $filename $ }}
   {{ end }}
+  {{ range .Site.Params.plugins_js -}}
+    <script async="async" src="{{ . }}"></script>
+  {{- end }}
 </head>
