@@ -606,3 +606,8 @@ article #post-list li {
   font-weight: 500;
 }
 
+div quoteback-component {
+	display: block;
+	margin-top: 20px;
+}
+
