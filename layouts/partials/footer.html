@@ -1,20 +1,18 @@
 <footer id="footer">
-
-<section id="wrapper">
   <ul>
     <li><a href="/feed.xml">RSS</a></li>
     <li><a href="/feed.json">JSON Feed</a></li>
     <li><a href="https://micro.blog/{{ .Site.Author.username }}" rel="me">Micro.blog</a></li>
-<!--     <li><a class="u-email" href="mailto:" rel="me">Email</a></li> -->
+    {{ with .Site.Author.email -}}
+     <li><a class="u-email" href="mailto:{{ . }}" rel="me">Email</a></li>
+    {{- end }}
   </ul>
   <form method="get" id="search" action="https://duckduckgo.com/">
-    <input type="hidden" name="sites" value="{{ "/" | absURL }}"/>
+    <input type="hidden" name="sites" value="{{ "/" | absURL }}" />
     <input type="hidden" name="k8" value="#444444"/>
     <input type="hidden" name="k9" value="#ee4792"/>
     <input type="hidden" name="kt" value="h"/>
     <input class="field" type="text" name="q" maxlength="255" placeholder="To search, type and hit Enter&hellip;"/>
     <input type="submit" value="Search" style="display: none;" />
   </form>
-</section>
-
 </footer>

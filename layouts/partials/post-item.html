@@ -1,22 +1,17 @@
 <li>
-<article>
-  {{ if .Title }}
-  <section class="post-body">
-  <header>
-	<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-  </header>
-  <section class="post-body">
-	{{ .Content }}
-  </section>
-  </section>
-  {{ else }}
-	{{ .Content }}
-  {{ end }}
-  <a href="{{ .Permalink }}" class="u-url">
-	<aside class="dates">
-	  <time datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}" class="dt-published">→ {{ .Date.Format "3:04 PM, Jan 2" }}</time>
-	</aside>
-  </a>
-</article>
+  <article class="h-entry post">
+    <header>
+    {{ with .Title -}}
+    <h2 class="p-name"><a href="{{ .Permalink }}">{{ . }}</a></h2>
+    {{- end }}
+    </header>
+    <section class="e-content post-body">
+    {{- .Content -}}
+    </section>
+    <footer class="dates">
+    <a href="{{ .Permalink }}" class="u-url">
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05-0700" }}" class="dt-published">→ {{ .Date.Format "3:04 PM, Jan 2" }}</time>
+    </a>
+    </footer>
+  </article>
 </li>
-<span class="separator"><span class="divider"></span></span>

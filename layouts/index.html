@@ -1,28 +1,28 @@
-{{ define "main" }}
+{{ define "main" -}}
 
 <ul id="post-list">
 
-{{ if or .IsHome .Site.Params.paginate_categories }}
-	{{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") }}
-	{{ $list := $paginator.Pages }}
-	{{ range $list  }}
-		{{ partial "post-item.html" . }}
-	{{ end }}
-{{ else }}
-	{{ $list := where .Site.Pages.ByDate.Reverse "Type" "post" }}
-	{{ range $list  }}
-		{{ partial "post-item.html" . }}
-	{{ end }}
-{{ end }}
+  {{- if or .IsHome .Site.Params.paginate_categories }}
+    {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") }}
+    {{ $list := $paginator.Pages }}
+    {{ range $list  }}
+      {{ partial "post-item.html" . }}
+    {{ end }}
+  {{- else -}}
+    {{ $list := where .Site.Pages.ByDate.Reverse "Type" "post" }}
+    {{ range $list  }}
+      {{ partial "post-item.html" . }}
+    {{ end }}
+  {{ end -}}
 
-</ul>
+  </ul>
 
-{{ if .IsHome }}
-	{{ if .Site.Params.paginate_home }}
-		{{ partial "pagination" . }}
-	{{ end }}
-{{ else if .Site.Params.paginate_categories }}
-	{{ partial "pagination" . }}
-{{ end }}
+  {{- if .IsHome }}
+    {{ if .Site.Params.paginate_home }}
+      {{ partial "pagination" . }}
+    {{ end }}
+  {{- else if .Site.Params.paginate_categories -}}
+    {{ partial "pagination" . }}
+  {{ end -}}
 
-{{ end }}
+{{- end }}

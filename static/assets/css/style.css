@@ -30,7 +30,7 @@ body {
 
 /* Profile */
 
-.profile #wrapper {
+.profile {
 	margin: 0 auto;
 	text-align: center;
 	padding: 80px 0;
@@ -94,7 +94,7 @@ nav.main-nav a.cta:hover {
 	margin-left: 12px;
 }
 
-#wrapper {
+main {
 	max-width: 600px;
 	margin: 0 auto;
 	padding: 25px;
@@ -179,7 +179,7 @@ li	{ list-style-type:circle; list-style-position:inside;}
 article ol li {
 	list-style-type: decimal;
 	padding-left: 20px;
-}  
+}
 
 article ul li {
 	list-style-type: disc;
@@ -195,7 +195,7 @@ article ul li {
 }
 
 article img {
-  padding: 20px 0px 20px 0px;	
+  padding: 20px 0px 20px 0px;
 }
 
 b, strong {
@@ -206,9 +206,9 @@ em, i {
 	font-style: italic;
 }
 
-sup { 
-    vertical-align: super;
-    font-size: smaller;
+sup {
+	vertical-align: super;
+	font-size: smaller;
 }
 
 .post header {
@@ -233,22 +233,15 @@ hr {
 	text-align: center;
 }
 
-span.separator {
-	display: block;
+article.post {
 	margin: 42px 0 48px 0;
-	width: 100%;
 }
 
-span.divider {
+article.post::after {
 	display: block;
-	width: 100%;
+	content: '';
 	background-color: #eee;
 	height: 1px;
-	margin: 0 auto;
-}
-
-span.separator:last-child {
-	display: none;
 }
 
 span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
@@ -322,11 +315,11 @@ Post List
 =========================================== */
 
 
-#post-list li {
+#post-list > li {
 	list-style-type: none;
 }
 
-#post-list li:last-child {
+#post-list > li:last-child {
 	margin-bottom: 0;
 }
 
@@ -337,7 +330,7 @@ Post List
 
 /* Footer */
 
-footer #wrapper {
+footer {
 	margin: 0 auto;
 	text-align: center;
 	padding: 35px 0 80px 0;
@@ -359,7 +352,7 @@ footer #wrapper {
 	padding: 0 10px;
 }
 
-#post-meta {
+.post-meta {
 	font-size: 13px;
 	font-weight: bold;
 	line-height: 1.5;
@@ -371,18 +364,18 @@ footer #wrapper {
 	border-bottom: 1px solid #eee;
 }
 
-#post-meta div span {
+.post-meta div span {
 	color: #aaa;
 	font-weight: 500;
 	display: block;
 }
 
-#post-meta div span.dark {
+.post-meta div span.dark {
 	color: #1E2025;
 
 }
 
-#post-meta div {
+.post-meta div {
 	float: left;
 }
 
@@ -421,7 +414,7 @@ footer #wrapper {
 	padding: 1px;
 }
 
-#post-meta img.avatar {
+.post-meta img.avatar {
   height: 36px;
   width: 36px;
   float: left;
@@ -464,17 +457,17 @@ h2.headline {
 /* Media Queries */
 @media screen and (max-width: 540px) {
 
-	footer #wrapper {
+	footer {
 		padding: 35px 0 60px 0;
 	}
 
-	.profile #wrapper {
+	.profile {
 		margin: 0 auto;
 		text-align: center;
 		padding: 70px 0 40px 0;
 	}
 
-	#post-meta {
+	.post-meta {
 		padding-top: 30px;
 		padding-bottom: 30px;
 		margin-top: 60px;
@@ -555,7 +548,7 @@ video {
     display: block;
 }
 
-/* 
+/*
 article #post-list li {
 	list-style-type: disc;
 }
