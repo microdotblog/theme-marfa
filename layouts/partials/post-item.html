@@ -1,16 +1,16 @@
 <li>
-<article>
+<article class="h-entry">
   {{ if .Title }}
   <section class="post-body">
   <header>
-	<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+	<h2><a href="{{ .Permalink }}" class="p-name">{{ .Title }}</a></h2>
   </header>
-  <section class="post-body">
+  <section class="post-body e-content">
 	{{ .Content }}
   </section>
   </section>
   {{ else }}
-	{{ .Content }}
+	<div class="post-body e-content">{{ .Content }}</div>
   {{ end }}
   <a href="{{ .Permalink }}" class="u-url">
 	<aside class="dates">
