@@ -8,6 +8,9 @@
       <time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">
         <a class="u-url dates" href="{{ .Permalink }}">{{ .Date.Format "Jan 2, 2006" }}</a>
       </time>
+      {{ with .Params.audio }}
+        <script type="text/javascript" src="https://micro.blog/narration.js?url={{ . }}"></script>
+      {{ end }}
     </h2>
   </header>
   <section class="e-content post-body">
