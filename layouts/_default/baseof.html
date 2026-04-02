@@ -3,7 +3,7 @@
 {{ partial "head.html" . }}
 <body>
   {{ partial "header.html" . }}
-  <section id="wrapper" {{ if eq .File.Dir "about/" }} class="bio" {{ end }}>
+  <section id="wrapper">
 	{{ block "main" . }}{{ end }}
   </section>
   {{ partial "footer.html" . }}

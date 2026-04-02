@@ -50,14 +50,6 @@ body {
 	font-weight: 400;
 }
 
-.bio p:first-child {
-	margin-top: 0;
-}
-
-.bio li {
-	list-style-position: outside;
-}
-
 /* Nav */
 
 nav.main-nav {
