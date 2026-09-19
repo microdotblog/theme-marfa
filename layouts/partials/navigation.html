@@ -1,7 +1,7 @@
 <nav class="main-nav">
 
 	<div class="site-title">
-		<img src="{{ .Site.Author.avatar }}" width="25" height="25" class="site-image">		
+		<img src="{{ .Site.Params.author.avatar }}" width="25" height="25" class="site-image">		
 		<a href="/">{{ .Site.Title }}</a>
 	</div>
 
@@ -21,7 +21,7 @@
 		{{ end }}
 	{{ end }}
 
-	<a class="cta" href="https://micro.blog/{{ .Site.Author.username }}" rel="me">Also on Micro.blog</a>
+	<a class="cta" href="https://micro.blog/{{ .Site.Params.author.username }}" rel="me">Also on Micro.blog</a>
 
 	</div>
 </nav>

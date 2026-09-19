@@ -34,10 +34,10 @@
 		  <span><a href="https://micro.blog/{{ .Params.author.username }}">@{{ .Params.author.username }}</a></span>
 		</div>
   	{{ else }}
-		<img class="u-photo avatar" src="{{ .Site.Author.avatar }}" width="96" height="96">
+		<img class="u-photo avatar" src="{{ .Site.Params.author.avatar }}" width="96" height="96">
 		<div>
-		  <span class="p-name dark">{{ .Site.Author.name }}</span>
-		  <span><a href="https://micro.blog/{{ .Site.Author.username }}">@{{ .Site.Author.username }}</a></span>
+		  <span class="p-name dark">{{ .Site.Params.author.name }}</span>
+		  <span><a href="https://micro.blog/{{ .Site.Params.author.username }}">@{{ .Site.Params.author.username }}</a></span>
 		</div>
 	{{ end }}
     </a>
